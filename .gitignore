@@ -1,3 +1,5 @@
+/src
 /logs
-/.data
 .env
+*.swp
+/docker-compose.yml
