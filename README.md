@@ -17,7 +17,7 @@
 2. Build and run containers
 
     ```bash
-    $ sudo ./run
+    $ ./run
     ```
 
 ## Useful commands
@@ -26,13 +26,13 @@ You can use the shortcut "exec" (= sudo docker-compose exec --user www-data php 
 
     ```bash
     # Bash 
-    $ exec bash
+    $ ./exec bash
     # Composer
-    $ exec composer update 
+    $ ./exec composer update 
     # Symfony2
-    $ exec sf doctrine:database:create 
+    $ ./exec sf doctrine:database:create 
     # Symfony3
-    $ exec sf3 doctrine:database:create 
+    $ ./exec sf3 doctrine:database:create 
     ```
 
 ## Customize
