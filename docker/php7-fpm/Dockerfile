@@ -30,6 +30,11 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN docker-php-ext-install pdo pdo_mysql && \
     docker-php-ext-enable xdebug 
 
+# NPM and gulp install
+RUN apt-get update && apt-get install -y npm && \
+	npm install -g gulp && \
+	npm install -g bower
+
 # Config xdebug
 RUN echo "error_reporting = E_ALL" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && \
     echo "display_startup_errors = On" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && \
